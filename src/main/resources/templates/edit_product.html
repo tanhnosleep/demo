@@ -7,7 +7,7 @@
 <body>
 	<div align="center">
 		<h1>Product List</h1>
-		<a href="new">Edit Product</a>
+		<a>Edit Product</a>
 		<br>
 		<form action="#" th:action="@{/save}" th:object="${product}" method="post">
 			<table border="1" cellpadding="10">
@@ -17,15 +17,15 @@
 					</tr>
 					<tr>
 						<td>Product name</td>
-						<td><input type="text" th:field="*{name}"/></td>
+						<td><input type="text" th:field="*{name}" required="required"/></td>
 					</tr>
 					<tr>
 						<td>Product brand</td>
-						<td><input type="text" th:field="*{brand}"/></td>
+						<td><input type="text" th:field="*{brand}"required="required"/></td>
 					</tr>
 					<tr>
 						<td>Product price</td>
-						<td><input type="text" th:field="*{price}"/></td>
+						<td><input type="text" th:field="*{price}"required="required"/></td>
 					</tr>
 					<tr>
 						<td colspan="2"><button type="submit">Save</button></td>
